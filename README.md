@@ -10,3 +10,4 @@ pip install nltk
 
 pip install matplotlib
 
+pip install pandas
