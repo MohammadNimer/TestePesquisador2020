@@ -18,13 +18,13 @@ listSum = list(sumData.values())
 ##1 - criando o gráfico de barras
 pos = arange(len(listName)) + .5
 
-##barh(pos, listSum, align='center', color='#b8ff5c')
-##yticks(pos, listName)
-##xlabel('Contagem de Palavras')
-##ylabel('Palavras')
-##title('Grafico de frequência de palavras')
-##grid(True)
-#show()
+barh(pos, listSum, align='center', color='#b8ff5c')
+yticks(pos, listName)
+xlabel('Contagem de Palavras')
+ylabel('Palavras')
+title('Grafico de frequência de palavras')
+grid(True)
+show()
 
 ##2 - Agrupar por ano e mes
 dados = df.loc[:,"Common_Word_Count":]
@@ -44,7 +44,7 @@ groupFiltered = group.loc[:, group.columns != 'Word_Count']
 groupFiltered = group.loc[:, group.columns != 'Common_Word_Count']
 
 groupFiltered.plot(x = 'mesAno', y = ['IsSpam','IsNotSpam'], kind = 'bar')
-#plt.show()
+plt.show()
 
 print('########## --------------------------------- ##########')
 ##3 - Calculos estatisticos
@@ -83,6 +83,3 @@ dg = dg[['Common_Word_Count','Date']].groupby(dg['mesAno']).max()
 
 print('Maior Sequência de palavras comuns de textos que não são spams por mês: ')
 print(dg)
-
-#Segunda Etapa
-##Classificar as mensagens por algoritmo proprio
