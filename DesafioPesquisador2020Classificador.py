@@ -1,3 +1,4 @@
+import time
 import pandas as pd
 import string
 import nltk
@@ -80,3 +81,5 @@ def pred(msg):
     return prediction[0]
 
 pred("You want something at the shop? They are given for free.")
+
+time.sleep(100)

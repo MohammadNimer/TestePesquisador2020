@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from pylab import *
+import time
 
 df = pd.read_csv('sms_senior.csv', encoding='unicode_escape', parse_dates=['Date'])
 
@@ -83,3 +84,5 @@ dg = dg[['Common_Word_Count','Date']].groupby(dg['mesAno']).max()
 
 print('Maior Sequência de palavras comuns de textos que não são spams por mês: ')
 print(dg)
+
+time.sleep(100)
