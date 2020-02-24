@@ -12,8 +12,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from math import log, sqrt
 
-#nltk.download('stopwords')
-#nltk.download('punkt')
+nltk.download('stopwords')
 
 pd.options.mode.chained_assignment = None
 
@@ -80,4 +79,4 @@ def pred(msg):
     print(prediction[0])
     return prediction[0]
 
-pred("Urgent! call 09061749602 from Landline. Your complimentary 4* Tenerife Holiday or £10,000 cash await collection SAE T&Cs BOX 528 HP20 1YF 150ppm 18+")
+pred("You want something at the shop? They are given for free.")
